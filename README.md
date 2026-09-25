@@ -19,9 +19,9 @@ Open the Kaggle notebook or run locally:
 pip install pandas numpy matplotlib seaborn
 
 ## Week 2: Building ML Models
-- Baseline (always "stay"): accuracy [X]
-- Best model: [name], AUC [X], recall [X] at threshold [t]
-- Top churn drivers (permutation importance): [feature 1], [2], [3]
-- Threshold chosen: [t], because [business reason]
-- Engineered features: [names]; effect on AUC: [before -> after]
--  Biggest lesson: [one sentence]
+Baseline (always "stay"): accuracy 0.735
+Best model: Logistic Regression, AUC 0.842, recall 0.567 at threshold 0.50
+Top churn drivers (permutation importance): tenure, TotalCharges, Contract_Two year
+Threshold chosen: 0.15, because missing a churner costs PKR 6000, compared with PKR 1000 for an unnecessary retention offer
+Engineered features: n_services, is_new, charge_per_mo, price_jump; effect on AUC: 0.8422 → 0.8420
+Biggest lesson: Lowering the threshold can increase recall when missing a churner is more costly, while the engineered features did not improve Random Forest AUC in this experiment.
